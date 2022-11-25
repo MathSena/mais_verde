@@ -1,6 +1,7 @@
 import 'package:mais_verde/src/models/item_model.dart';
 
 import '../models/cart_item_model.dart';
+import '../models/user_model.dart';
 
 ItemModel apple = ItemModel(
   description: "A melhor maça do Brasil",
@@ -78,3 +79,5 @@ CartItemModel(item: apple,quantity:1),
 CartItemModel(item: mango,quantity: 2),
 CartItemModel(item: grape, quantity: 3),
 ];
+
+UserModel user = UserModel(name: 'mathsena', email: 'teste@teste.com', phone: '1197111112', cpf: '411111111', password: '');
