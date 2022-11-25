@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../cart/cart_tab.dart';
 import '../home/home_tab.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -23,7 +24,7 @@ class _BaseScreenState extends State<BaseScreen> {
       controller: pageController,
       children: [
         const HomeTab(),
-        Container(color: Colors.yellow),
+        CartTab(),
         Container(color: Colors.black),
         Container(color: Colors.pink),
       ]
