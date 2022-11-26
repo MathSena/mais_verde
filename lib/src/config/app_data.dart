@@ -1,6 +1,7 @@
 import 'package:mais_verde/src/models/item_model.dart';
 
 import '../models/cart_item_model.dart';
+import '../models/order_model.dart';
 import '../models/user_model.dart';
 
 ItemModel apple = ItemModel(
@@ -81,3 +82,37 @@ CartItemModel(item: grape, quantity: 3),
 ];
 
 UserModel user = UserModel(name: 'mathsena', email: 'teste@teste.com', phone: '1197111112', cpf: '411111111', password: '');
+
+
+List<OrderModel> orders = [
+  OrderModel(
+    copyAndPaste: 'q1w2w3s5d8e',
+    createdDateTime: DateTime.parse('2022-11-08 10:00:10.458'),
+    id: 'v789789d',
+    overdueDateTime: DateTime.parse('2022-11-30 10:00:10.458'),
+    items: [
+      CartItemModel(
+        item: apple,
+        quantity: 2,
+      ),
+      
+    ], status: 'pending_payment', total: 11.0,
+    
+  ),
+
+  OrderModel(
+    copyAndPaste: 'q1w2w3s5d8e',
+    createdDateTime: DateTime.parse('2022-11-08 10:00:10.458'),
+    id: 'v789789d',
+    overdueDateTime: DateTime.parse('2022-11-21 10:00:10.458'),
+    items: [
+      CartItemModel(
+        item: mango,
+        quantity: 5,
+      ),
+
+    ], status: 'delivered', total: 11.0,
+
+  ),
+  
+];

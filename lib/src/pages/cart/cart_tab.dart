@@ -3,6 +3,7 @@ import 'package:mais_verde/src/pages/cart/components/cart_tile.dart';
 import '../../models/cart_item_model.dart';
 import '../../services/utils_services.dart';
 import '../../config/app_data.dart' as app_data;
+import '../common_widgets/payment_dialog.dart';
 
 class CartTab extends StatefulWidget {
   const CartTab({Key? key}) : super(key: key);
@@ -85,6 +86,10 @@ class _CartTabState extends State<CartTab> {
                         ),
                         onPressed: () async {
                           bool? result =  showOrderConfirmation() as bool?;
+
+                          if(result ?? false) {
+
+                          }
                         },
                         child: const Text(
                           'Concluir Pedido',
@@ -131,4 +136,6 @@ class _CartTabState extends State<CartTab> {
       },
     );
   }
+
+
 }
