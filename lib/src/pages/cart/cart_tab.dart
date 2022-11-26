@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:mais_verde/src/pages/cart/components/cart_tile.dart';
 import '../../models/cart_item_model.dart';
@@ -15,9 +17,12 @@ class CartTab extends StatefulWidget {
 class _CartTabState extends State<CartTab> {
   final UtilsServices utilServices = UtilsServices();
 
+  // ignore: non_constant_identifier_names
   void RemoveItemFromCart(CartItemModel cartItem) {
     setState(() {
       app_data.cartItems.remove(cartItem);
+
+      utilServices.showToast(message: "${cartItem.item.itemName} removido!", isError: true);
     });
   }
 

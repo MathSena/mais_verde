@@ -25,7 +25,7 @@ class SignInScreen extends StatelessWidget {
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children:  [
-                        Image.asset("assets/app_imagens/logotipo.png"),
+                        Image.asset("assets/app_images/mais_verde.png"),
                         SizedBox(
                           height:30,
                           child: DefaultTextStyle(

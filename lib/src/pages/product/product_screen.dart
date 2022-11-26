@@ -5,7 +5,7 @@ import '../../services/utils_services.dart';
 import '../common_widgets/quantity_widget.dart';
 
 class ProductScreen extends StatefulWidget {
-  ProductScreen({
+  const ProductScreen({
     Key? key,
     required this.item,
   }) : super(
@@ -65,16 +65,14 @@ class _ProductScreenState extends State<ProductScreen> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  child: QuantityWidget(
-                                    suffixText: widget.item.unit,
-                                    value: cartItemQuantity,
-                                    result: (quantity) {
-                                      setState(() {
-                                        cartItemQuantity = quantity;
-                                      });
-                                    },
-                                  ),
+                                QuantityWidget(
+                                  suffixText: widget.item.unit,
+                                  value: cartItemQuantity,
+                                  result: (quantity) {
+                                    setState(() {
+                                      cartItemQuantity = quantity;
+                                    });
+                                  },
                                 )
                               ],
                             ),
