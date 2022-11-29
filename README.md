@@ -44,6 +44,12 @@ Inicialmente é exibida uma **Splash Screen**.
 Após isso, ele pode **criar uma conta** ou **entrar** com uma conta já existente
 OBS: Para realizar o cadastro é necessário informar um CPF. Celular e E-mail existentes no formato requerido
 
+
+Caso queira realizar o login com um user de serviço, esse abaixo pode ser usado:
+Email: vestibulante@outlook.com
+Senha: senha123
+
+
 <img width="250" alt="Tela de Login" src="lib/src/prints/login.png" /> <img width="250" alt="Cadastro" src="lib/src/prints/cadastro.png" />
 
 Caso necessário, é possível solicitar uma ***recuperação de senha*** para o e-mail cadastrado:
