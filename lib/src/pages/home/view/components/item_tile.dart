@@ -122,9 +122,7 @@ class _ItemTileState extends State<ItemTile> {
                 child: Ink(
                   height: 40,
                   width: 35,
-                  decoration: const BoxDecoration(
-                    color: Colors.red
-                  ),
+                  decoration: const BoxDecoration(color: Colors.red),
                   child: Icon(
                     tileIcon,
                     color: Colors.white,

@@ -1,5 +1,3 @@
-
-
 import '../../../constants/endpoints.dart';
 import '../../../models/category_model.dart';
 import '../../../models/item_model.dart';
@@ -17,9 +15,9 @@ class HomeRespository {
 
     if (result['result'] != null) {
       List<CategoryModel> data =
-      (List<Map<String, dynamic>>.from(result['result']))
-          .map(CategoryModel.fromJson)
-          .toList();
+          (List<Map<String, dynamic>>.from(result['result']))
+              .map(CategoryModel.fromJson)
+              .toList();
 
       return HomeResult<CategoryModel>.success(data);
     } else {

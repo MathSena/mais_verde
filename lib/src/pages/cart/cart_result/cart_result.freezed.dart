@@ -22,6 +22,7 @@ mixin _$CartResult<T> {
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(T data)? success,
@@ -30,17 +31,19 @@ mixin _$CartResult<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function(T data)? success,
-  TResult Function(String message)? error,
-  required TResult orElse(),
+    TResult Function(T data)? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
   }) =>
-  throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Success<T> value)? success,
@@ -49,18 +52,18 @@ mixin _$CartResult<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Success<T> value)? success,
-  TResult Function(Error<T> value)? error,
-  required TResult orElse(),
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
   }) =>
-  throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CartResultCopyWith<T, $Res> {
   factory $CartResultCopyWith(
-      CartResult<T> value, $Res Function(CartResult<T>) then) =
-  _$CartResultCopyWithImpl<T, $Res>;
+          CartResult<T> value, $Res Function(CartResult<T>) then) =
+      _$CartResultCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -69,6 +72,7 @@ class _$CartResultCopyWithImpl<T, $Res>
   _$CartResultCopyWithImpl(this._value, this._then);
 
   final CartResult<T> _value;
+
   // ignore: unused_field
   final $Res Function(CartResult<T>) _then;
 }
@@ -76,7 +80,8 @@ class _$CartResultCopyWithImpl<T, $Res>
 /// @nodoc
 abstract class $SuccessCopyWith<T, $Res> {
   factory $SuccessCopyWith(Success<T> value, $Res Function(Success<T>) then) =
-  _$SuccessCopyWithImpl<T, $Res>;
+      _$SuccessCopyWithImpl<T, $Res>;
+
   $Res call({T data});
 }
 
@@ -97,7 +102,7 @@ class _$SuccessCopyWithImpl<T, $Res> extends _$CartResultCopyWithImpl<T, $Res>
       data == freezed
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-      as T,
+              as T,
     ));
   }
 }
@@ -153,14 +158,14 @@ class _$Success<T> implements Success<T> {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function(T data)? success,
-  TResult Function(String message)? error,
-  required TResult orElse(),
+    TResult Function(T data)? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
   }) {
-  if (success != null) {
-  return success(data);
-  }
-  return orElse();
+    if (success != null) {
+      return success(data);
+    }
+    return orElse();
   }
 
   @override
@@ -184,14 +189,14 @@ class _$Success<T> implements Success<T> {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Success<T> value)? success,
-  TResult Function(Error<T> value)? error,
-  required TResult orElse(),
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
   }) {
-  if (success != null) {
-  return success(this);
-  }
-  return orElse();
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
   }
 }
 
@@ -199,6 +204,7 @@ abstract class Success<T> implements CartResult<T> {
   factory Success(final T data) = _$Success<T>;
 
   T get data => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $SuccessCopyWith<T, Success<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -207,7 +213,8 @@ abstract class Success<T> implements CartResult<T> {
 /// @nodoc
 abstract class $ErrorCopyWith<T, $Res> {
   factory $ErrorCopyWith(Error<T> value, $Res Function(Error<T>) then) =
-  _$ErrorCopyWithImpl<T, $Res>;
+      _$ErrorCopyWithImpl<T, $Res>;
+
   $Res call({String message});
 }
 
@@ -228,7 +235,7 @@ class _$ErrorCopyWithImpl<T, $Res> extends _$CartResultCopyWithImpl<T, $Res>
       message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-      as String,
+              as String,
     ));
   }
 }
@@ -284,14 +291,14 @@ class _$Error<T> implements Error<T> {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function(T data)? success,
-  TResult Function(String message)? error,
-  required TResult orElse(),
+    TResult Function(T data)? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
   }) {
-  if (error != null) {
-  return error(message);
-  }
-  return orElse();
+    if (error != null) {
+      return error(message);
+    }
+    return orElse();
   }
 
   @override
@@ -315,14 +322,14 @@ class _$Error<T> implements Error<T> {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Success<T> value)? success,
-  TResult Function(Error<T> value)? error,
-  required TResult orElse(),
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
   }) {
-  if (error != null) {
-  return error(this);
-  }
-  return orElse();
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
   }
 }
 
@@ -330,6 +337,7 @@ abstract class Error<T> implements CartResult<T> {
   factory Error(final String message) = _$Error<T>;
 
   String get message => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $ErrorCopyWith<T, Error<T>> get copyWith =>
       throw _privateConstructorUsedError;

@@ -2,7 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'cart_item_model.dart';
 
-
 part 'order_model.g.dart';
 
 @JsonSerializable()
@@ -40,6 +39,7 @@ class OrderModel {
 
   factory OrderModel.fromJson(Map<String, dynamic> json) =>
       _$OrderModelFromJson(json);
+
   Map<String, dynamic> toJson() => _$OrderModelToJson(this);
 
   @override

@@ -5,7 +5,6 @@ import '../../services/validators.dart';
 import '../auth/controller/auth_controller.dart';
 import '../common_widgets/custom_text_field.dart';
 
-
 class ProfileTab extends StatefulWidget {
   const ProfileTab({Key? key}) : super(key: key);
 
@@ -169,27 +168,27 @@ class _ProfileTabState extends State<ProfileTab> {
                       SizedBox(
                         height: 45,
                         child: Obx(() => ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                          ),
-                          onPressed: authController.isLoading.value
-                              ? null
-                              : () {
-                            if (_formKey.currentState!.validate()) {
-                              authController.changePassword(
-                                currentPassword:
-                                currentPasswordController.text,
-                                newPassword:
-                                newPasswordController.text,
-                              );
-                            }
-                          },
-                          child: authController.isLoading.value
-                              ? const CircularProgressIndicator()
-                              : const Text('Atualizar'),
-                        )),
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              onPressed: authController.isLoading.value
+                                  ? null
+                                  : () {
+                                      if (_formKey.currentState!.validate()) {
+                                        authController.changePassword(
+                                          currentPassword:
+                                              currentPasswordController.text,
+                                          newPassword:
+                                              newPasswordController.text,
+                                        );
+                                      }
+                                    },
+                              child: authController.isLoading.value
+                                  ? const CircularProgressIndicator()
+                                  : const Text('Atualizar'),
+                            )),
                       ),
                     ],
                   ),

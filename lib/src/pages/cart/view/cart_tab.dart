@@ -24,7 +24,7 @@ class _CartTabState extends State<CartTab> {
       ),
       body: Column(
         children: [
-          // Lista de itens do carrinho
+
           Expanded(
             child: GetBuilder<CartController>(
               builder: (controller) {
@@ -54,7 +54,7 @@ class _CartTabState extends State<CartTab> {
             ),
           ),
 
-          // Total e botão de concluir o pedido
+
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
@@ -112,27 +112,27 @@ class _CartTabState extends State<CartTab> {
                           ),
                         ),
                         onPressed: (controller.isCheckoutLoading ||
-                            controller.cartItems.isEmpty)
+                                controller.cartItems.isEmpty)
                             ? null
                             : () async {
-                          bool? result = await showOrderConfirmation();
+                                bool? result = await showOrderConfirmation();
 
-                          if (result ?? false) {
-                            cartController.checkoutCart();
-                          } else {
-                            utilsServices.showToast(
-                              message: 'Pedido não confirmado',
-                            );
-                          }
-                        },
+                                if (result ?? false) {
+                                  cartController.checkoutCart();
+                                } else {
+                                  utilsServices.showToast(
+                                    message: 'Pedido não confirmado',
+                                  );
+                                }
+                              },
                         child: controller.isCheckoutLoading
                             ? const CircularProgressIndicator()
                             : const Text(
-                          'Concluir pedido',
-                          style: TextStyle(
-                            fontSize: 18,
-                          ),
-                        ),
+                                'Concluir pedido',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                ),
+                              ),
                       );
                     },
                   ),

@@ -22,6 +22,7 @@ mixin _$OrdersResult<T> {
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(T data)? success,
@@ -35,12 +36,14 @@ mixin _$OrdersResult<T> {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Success<T> value)? success,
@@ -69,6 +72,7 @@ class _$OrdersResultCopyWithImpl<T, $Res>
   _$OrdersResultCopyWithImpl(this._value, this._then);
 
   final OrdersResult<T> _value;
+
   // ignore: unused_field
   final $Res Function(OrdersResult<T>) _then;
 }
@@ -77,6 +81,7 @@ class _$OrdersResultCopyWithImpl<T, $Res>
 abstract class $SuccessCopyWith<T, $Res> {
   factory $SuccessCopyWith(Success<T> value, $Res Function(Success<T>) then) =
       _$SuccessCopyWithImpl<T, $Res>;
+
   $Res call({T data});
 }
 
@@ -199,6 +204,7 @@ abstract class Success<T> implements OrdersResult<T> {
   factory Success(final T data) = _$Success<T>;
 
   T get data => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $SuccessCopyWith<T, Success<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -208,6 +214,7 @@ abstract class Success<T> implements OrdersResult<T> {
 abstract class $ErrorCopyWith<T, $Res> {
   factory $ErrorCopyWith(Error<T> value, $Res Function(Error<T>) then) =
       _$ErrorCopyWithImpl<T, $Res>;
+
   $Res call({String message});
 }
 
@@ -330,6 +337,7 @@ abstract class Error<T> implements OrdersResult<T> {
   factory Error(final String message) = _$Error<T>;
 
   String get message => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $ErrorCopyWith<T, Error<T>> get copyWith =>
       throw _privateConstructorUsedError;

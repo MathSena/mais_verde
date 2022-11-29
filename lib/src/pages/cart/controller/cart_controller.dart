@@ -104,7 +104,7 @@ class CartController extends GetxController {
 
   Future<void> getCartItems() async {
     final CartResult<List<CartItemModel>> result =
-    await cartRepository.getCartItems(
+        await cartRepository.getCartItems(
       token: authController.user.token!,
       userId: authController.user.id!,
     );

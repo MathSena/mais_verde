@@ -22,6 +22,7 @@ mixin _$HomeResult<T> {
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(List<T> data)? success,
@@ -30,17 +31,19 @@ mixin _$HomeResult<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function(List<T> data)? success,
-  TResult Function(String message)? error,
-  required TResult orElse(),
+    TResult Function(List<T> data)? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
   }) =>
-  throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Success<T> value)? success,
@@ -49,18 +52,18 @@ mixin _$HomeResult<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Success<T> value)? success,
-  TResult Function(Error<T> value)? error,
-  required TResult orElse(),
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
   }) =>
-  throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $HomeResultCopyWith<T, $Res> {
   factory $HomeResultCopyWith(
-      HomeResult<T> value, $Res Function(HomeResult<T>) then) =
-  _$HomeResultCopyWithImpl<T, $Res>;
+          HomeResult<T> value, $Res Function(HomeResult<T>) then) =
+      _$HomeResultCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -69,6 +72,7 @@ class _$HomeResultCopyWithImpl<T, $Res>
   _$HomeResultCopyWithImpl(this._value, this._then);
 
   final HomeResult<T> _value;
+
   // ignore: unused_field
   final $Res Function(HomeResult<T>) _then;
 }
@@ -76,7 +80,8 @@ class _$HomeResultCopyWithImpl<T, $Res>
 /// @nodoc
 abstract class $SuccessCopyWith<T, $Res> {
   factory $SuccessCopyWith(Success<T> value, $Res Function(Success<T>) then) =
-  _$SuccessCopyWithImpl<T, $Res>;
+      _$SuccessCopyWithImpl<T, $Res>;
+
   $Res call({List<T> data});
 }
 
@@ -97,7 +102,7 @@ class _$SuccessCopyWithImpl<T, $Res> extends _$HomeResultCopyWithImpl<T, $Res>
       data == freezed
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-      as List<T>,
+              as List<T>,
     ));
   }
 }
@@ -108,6 +113,7 @@ class _$Success<T> implements Success<T> {
   _$Success(final List<T> data) : _data = data;
 
   final List<T> _data;
+
   @override
   List<T> get data {
     // ignore: implicit_dynamic_type
@@ -157,14 +163,14 @@ class _$Success<T> implements Success<T> {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function(List<T> data)? success,
-  TResult Function(String message)? error,
-  required TResult orElse(),
+    TResult Function(List<T> data)? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
   }) {
-  if (success != null) {
-  return success(data);
-  }
-  return orElse();
+    if (success != null) {
+      return success(data);
+    }
+    return orElse();
   }
 
   @override
@@ -188,14 +194,14 @@ class _$Success<T> implements Success<T> {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Success<T> value)? success,
-  TResult Function(Error<T> value)? error,
-  required TResult orElse(),
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
   }) {
-  if (success != null) {
-  return success(this);
-  }
-  return orElse();
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
   }
 }
 
@@ -203,6 +209,7 @@ abstract class Success<T> implements HomeResult<T> {
   factory Success(final List<T> data) = _$Success<T>;
 
   List<T> get data => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $SuccessCopyWith<T, Success<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -211,7 +218,8 @@ abstract class Success<T> implements HomeResult<T> {
 /// @nodoc
 abstract class $ErrorCopyWith<T, $Res> {
   factory $ErrorCopyWith(Error<T> value, $Res Function(Error<T>) then) =
-  _$ErrorCopyWithImpl<T, $Res>;
+      _$ErrorCopyWithImpl<T, $Res>;
+
   $Res call({String message});
 }
 
@@ -232,7 +240,7 @@ class _$ErrorCopyWithImpl<T, $Res> extends _$HomeResultCopyWithImpl<T, $Res>
       message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-      as String,
+              as String,
     ));
   }
 }
@@ -288,14 +296,14 @@ class _$Error<T> implements Error<T> {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function(List<T> data)? success,
-  TResult Function(String message)? error,
-  required TResult orElse(),
+    TResult Function(List<T> data)? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
   }) {
-  if (error != null) {
-  return error(message);
-  }
-  return orElse();
+    if (error != null) {
+      return error(message);
+    }
+    return orElse();
   }
 
   @override
@@ -319,14 +327,14 @@ class _$Error<T> implements Error<T> {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Success<T> value)? success,
-  TResult Function(Error<T> value)? error,
-  required TResult orElse(),
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
   }) {
-  if (error != null) {
-  return error(this);
-  }
-  return orElse();
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
   }
 }
 
@@ -334,6 +342,7 @@ abstract class Error<T> implements HomeResult<T> {
   factory Error(final String message) = _$Error<T>;
 
   String get message => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $ErrorCopyWith<T, Error<T>> get copyWith =>
       throw _privateConstructorUsedError;

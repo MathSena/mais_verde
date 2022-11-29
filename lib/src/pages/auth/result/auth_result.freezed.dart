@@ -9,9 +9,6 @@ part of 'auth_result.dart';
 // FreezedGenerator
 // **************************************************************************
 
-
-
-
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
@@ -25,6 +22,7 @@ mixin _$AuthResult {
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(UserModel user)? success,
@@ -33,17 +31,19 @@ mixin _$AuthResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function(UserModel user)? success,
-  TResult Function(String message)? error,
-  required TResult orElse(),
+    TResult Function(UserModel user)? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
   }) =>
-  throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Success value) success,
     required TResult Function(Error value) error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Success value)? success,
@@ -52,18 +52,18 @@ mixin _$AuthResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Success value)? success,
-  TResult Function(Error value)? error,
-  required TResult orElse(),
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    required TResult orElse(),
   }) =>
-  throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AuthResultCopyWith<$Res> {
   factory $AuthResultCopyWith(
-      AuthResult value, $Res Function(AuthResult) then) =
-  _$AuthResultCopyWithImpl<$Res>;
+          AuthResult value, $Res Function(AuthResult) then) =
+      _$AuthResultCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -71,6 +71,7 @@ class _$AuthResultCopyWithImpl<$Res> implements $AuthResultCopyWith<$Res> {
   _$AuthResultCopyWithImpl(this._value, this._then);
 
   final AuthResult _value;
+
   // ignore: unused_field
   final $Res Function(AuthResult) _then;
 }
@@ -78,7 +79,8 @@ class _$AuthResultCopyWithImpl<$Res> implements $AuthResultCopyWith<$Res> {
 /// @nodoc
 abstract class $SuccessCopyWith<$Res> {
   factory $SuccessCopyWith(Success value, $Res Function(Success) then) =
-  _$SuccessCopyWithImpl<$Res>;
+      _$SuccessCopyWithImpl<$Res>;
+
   $Res call({UserModel user});
 }
 
@@ -99,7 +101,7 @@ class _$SuccessCopyWithImpl<$Res> extends _$AuthResultCopyWithImpl<$Res>
       user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
-      as UserModel,
+              as UserModel,
     ));
   }
 }
@@ -155,14 +157,14 @@ class _$Success implements Success {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function(UserModel user)? success,
-  TResult Function(String message)? error,
-  required TResult orElse(),
+    TResult Function(UserModel user)? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
   }) {
-  if (success != null) {
-  return success(user);
-  }
-  return orElse();
+    if (success != null) {
+      return success(user);
+    }
+    return orElse();
   }
 
   @override
@@ -186,14 +188,14 @@ class _$Success implements Success {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Success value)? success,
-  TResult Function(Error value)? error,
-  required TResult orElse(),
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    required TResult orElse(),
   }) {
-  if (success != null) {
-  return success(this);
-  }
-  return orElse();
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
   }
 }
 
@@ -201,6 +203,7 @@ abstract class Success implements AuthResult {
   factory Success(final UserModel user) = _$Success;
 
   UserModel get user => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $SuccessCopyWith<Success> get copyWith => throw _privateConstructorUsedError;
 }
@@ -208,7 +211,8 @@ abstract class Success implements AuthResult {
 /// @nodoc
 abstract class $ErrorCopyWith<$Res> {
   factory $ErrorCopyWith(Error value, $Res Function(Error) then) =
-  _$ErrorCopyWithImpl<$Res>;
+      _$ErrorCopyWithImpl<$Res>;
+
   $Res call({String message});
 }
 
@@ -229,7 +233,7 @@ class _$ErrorCopyWithImpl<$Res> extends _$AuthResultCopyWithImpl<$Res>
       message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-      as String,
+              as String,
     ));
   }
 }
@@ -285,14 +289,14 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function(UserModel user)? success,
-  TResult Function(String message)? error,
-  required TResult orElse(),
+    TResult Function(UserModel user)? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
   }) {
-  if (error != null) {
-  return error(message);
-  }
-  return orElse();
+    if (error != null) {
+      return error(message);
+    }
+    return orElse();
   }
 
   @override
@@ -316,14 +320,14 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Success value)? success,
-  TResult Function(Error value)? error,
-  required TResult orElse(),
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    required TResult orElse(),
   }) {
-  if (error != null) {
-  return error(this);
-  }
-  return orElse();
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
   }
 }
 
@@ -331,6 +335,7 @@ abstract class Error implements AuthResult {
   factory Error(final String message) = _$Error;
 
   String get message => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $ErrorCopyWith<Error> get copyWith => throw _privateConstructorUsedError;
 }

@@ -13,7 +13,6 @@ class SignInScreen extends StatelessWidget {
 
   final _formKey = GlobalKey<FormState>();
 
-
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -35,11 +34,9 @@ class SignInScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    
                     Expanded(
                       child: Image.asset("assets/app_images/mais_verde.png"),
                     ),
-                    
                     SizedBox(
                       height: 30,
                       child: DefaultTextStyle(
@@ -63,8 +60,6 @@ class SignInScreen extends StatelessWidget {
                   ],
                 ),
               ),
-
-              // Formulário
               Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 32,
@@ -81,7 +76,6 @@ class SignInScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      // Email
                       CustomTextField(
                         controller: emailController,
                         icon: Icons.email,
@@ -89,7 +83,6 @@ class SignInScreen extends StatelessWidget {
                         validator: emailValidator,
                       ),
 
-                      // Senha
                       CustomTextField(
                         controller: passwordController,
                         icon: Icons.lock,
@@ -98,7 +91,6 @@ class SignInScreen extends StatelessWidget {
                         validator: passwordValidator,
                       ),
 
-                      // Botão de entrar
                       SizedBox(
                         height: 50,
                         child: GetX<AuthController>(
@@ -112,31 +104,30 @@ class SignInScreen extends StatelessWidget {
                               onPressed: authController.isLoading.value
                                   ? null
                                   : () {
-                                FocusScope.of(context).unfocus();
+                                      FocusScope.of(context).unfocus();
 
-                                if (_formKey.currentState!.validate()) {
-                                  String email = emailController.text;
-                                  String password =
-                                      passwordController.text;
+                                      if (_formKey.currentState!.validate()) {
+                                        String email = emailController.text;
+                                        String password =
+                                            passwordController.text;
 
-                                  authController.signIn(
-                                      email: email, password: password);
-                                }
-                              },
+                                        authController.signIn(
+                                            email: email, password: password);
+                                      }
+                                    },
                               child: authController.isLoading.value
                                   ? const CircularProgressIndicator()
                                   : const Text(
-                                'Entrar',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                ),
-                              ),
+                                      'Entrar',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                      ),
+                                    ),
                             );
                           },
                         ),
                       ),
 
-                      // Esqueceu a senha
                       Align(
                         alignment: Alignment.centerRight,
                         child: TextButton(
@@ -153,7 +144,7 @@ class SignInScreen extends StatelessWidget {
                             if (result ?? false) {
                               utilsServices.showToast(
                                 message:
-                                'Um link de recuperação foi enviado para seu email.',
+                                    'Um link de recuperação foi enviado para seu email.',
                               );
                             }
                           },
@@ -166,7 +157,6 @@ class SignInScreen extends StatelessWidget {
                         ),
                       ),
 
-                      // Divisor
                       Padding(
                         padding: const EdgeInsets.only(bottom: 10),
                         child: Row(

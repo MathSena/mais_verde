@@ -24,9 +24,9 @@ class OrdersRepository {
 
     if (result['result'] != null) {
       List<CartItemModel> items =
-      List<Map<String, dynamic>>.from(result['result'])
-          .map(CartItemModel.fromJson)
-          .toList();
+          List<Map<String, dynamic>>.from(result['result'])
+              .map(CartItemModel.fromJson)
+              .toList();
 
       return OrdersResult<List<CartItemModel>>.success(items);
     } else {
@@ -52,9 +52,9 @@ class OrdersRepository {
 
     if (result['result'] != null) {
       List<OrderModel> orders =
-      List<Map<String, dynamic>>.from(result['result'])
-          .map(OrderModel.fromJson)
-          .toList();
+          List<Map<String, dynamic>>.from(result['result'])
+              .map(OrderModel.fromJson)
+              .toList();
 
       return OrdersResult<List<OrderModel>>.success(orders);
     } else {

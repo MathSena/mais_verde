@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../../models/order_model.dart';
 import '../../services/utils_services.dart';
 
-
 class PaymentDialog extends StatelessWidget {
   final OrderModel order;
 
@@ -24,13 +23,11 @@ class PaymentDialog extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          // Conteúdo
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // Titulo
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 10),
                   child: Text(
@@ -49,7 +46,6 @@ class PaymentDialog extends StatelessWidget {
                   width: 200,
                 ),
 
-                // Vencimento
                 Text(
                   'Vencimento: ${utilsServices.formatDateTime(order.overdueDateTime)}',
                   style: const TextStyle(
@@ -57,7 +53,6 @@ class PaymentDialog extends StatelessWidget {
                   ),
                 ),
 
-                // Total
                 Text(
                   'Total: ${utilsServices.priceToCurrency(order.total)}',
                   style: const TextStyle(
@@ -66,7 +61,6 @@ class PaymentDialog extends StatelessWidget {
                   ),
                 ),
 
-                // Botão copia e cola
                 OutlinedButton.icon(
                   style: OutlinedButton.styleFrom(
                     shape: RoundedRectangleBorder(
@@ -95,7 +89,6 @@ class PaymentDialog extends StatelessWidget {
               ],
             ),
           ),
-
           Positioned(
             top: 0,
             right: 0,

@@ -1,10 +1,10 @@
-import 'package:mais_verde/src/pages/auth/repository/auth_errors.dart' as authErrors;
+import 'package:mais_verde/src/pages/auth/repository/auth_errors.dart'
+    as authErrors;
 
 import '../../../constants/endpoints.dart';
 import '../../../models/user_model.dart';
 import '../../../services/http_manager.dart';
 import '../result/auth_result.dart';
-
 
 class AuthRepository {
   final HttpManager _httpManager = HttpManager();

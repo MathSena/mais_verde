@@ -43,7 +43,45 @@ selecionado.
 Inicialmente é exibida uma **Splash Screen**.
 Após isso, ele pode **criar uma conta** ou **entrar** com uma conta já existente:
 
-<img width="250" alt="Tela de Login" src="lib/src/prints/login.png" /> 
+ - Login
+<img width="250" alt="Tela de Login" src="lib/src/prints/login.png" />
+
+ - Realizar Cadastro
+   <img width="250" alt="Cadastro" src="lib/src/prints/cadastro.png" />
+
+Caso necessário, é possível solicitar uma ***recuperação de senha*** para o e-mail cadastrado:
+- Recuperação de Senha
+  <img width="250" alt="Cadastro" src="lib/src/prints/recuperar.png" />
+
+Após isso, é exibida uma página com os ***itens disponíveis para compra***, separados por categoria de produto.
+Ao clicar no ícone do carrinho, em cima do produto, é adicionado o item ao carrinho:
+- Página principal
+  <img width="250" alt="Itens de pedido" src="lib/src/prints/itens.png" />
+
+No Carrinho de compras, é possível adicionar mais itens e após clicar em concluir pedido, é exibido um QR Code para ***pagamento via PIX:***
+- Carrinho de compras
+  <img width="250" alt="Carrinho de compras" src="lib/src/prints/carrinho.png" />
+
+- Confirmar pagamento
+  <img width="250" alt="Confirmação de Pagamento" src="lib/src/prints/confirmar_pag.png" />
+
+- QR Code de pagamento PIX
+  <img width="250" alt="QR code dos pedidos" src="lib/src/prints/pagamento_pix.png" />
+
+Em pedidos, é exibida uma ***lista com os pedidos*** feitos pelo usuário, na qual é possível verificar o status dos pedidos e solicitar novamente o QR Code PIX
+- Lista de pedidos feitos pelo usuário com status:
+  <img width="250" alt="Lista de Pedidos" src="lib/src/prints/pedidos.png" />
+
+  
+Ao clicar em perfil, além de ser exibida as ***informações do usuário***, é possível
+É possível ***alterar a senha do usuário:***
+- Informações dos pedidos
+  <img width="250" alt="Informações do perfil" src="lib/src/prints/cadastro_perfil.png" />
+
+- Alteração de Senha
+  <img width="250" alt="Alterar Senha" src="lib/src/prints/alterar_senha.png" />
+
+OBS.: Valores, preços e descrição dos produtos não refletem a realidade
 
 
 

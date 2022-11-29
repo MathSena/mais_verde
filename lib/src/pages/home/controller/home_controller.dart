@@ -6,7 +6,6 @@ import '../../../services/utils_services.dart';
 import '../repository/home_repository.dart';
 import '../result/home_result.dart';
 
-
 const int itemsPerPage = 6;
 
 class HomeController extends GetxController {
@@ -17,6 +16,7 @@ class HomeController extends GetxController {
   bool isProductLoading = true;
   List<CategoryModel> allCategories = [];
   CategoryModel? currentCategory;
+
   List<ItemModel> get allProducts => currentCategory?.items ?? [];
 
   RxString searchTitle = ''.obs;
@@ -41,7 +41,7 @@ class HomeController extends GetxController {
 
     debounce(
       searchTitle,
-          (_) => filterByTitle(),
+      (_) => filterByTitle(),
       time: const Duration(milliseconds: 600),
     );
 
@@ -61,7 +61,7 @@ class HomeController extends GetxController {
     setLoading(true);
 
     HomeResult<CategoryModel> homeResult =
-    await homeRespository.getAllCategories();
+        await homeRespository.getAllCategories();
 
     setLoading(false);
 

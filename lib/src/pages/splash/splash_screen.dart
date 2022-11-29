@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../common_widgets/app_name_widget.dart';
 
-
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -15,15 +14,10 @@ class SplashScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [
-              Color(0xFF8BC34A),
-              Color(0xFF8BC34A)
-
-            ],
+            colors: [Color(0xFF8BC34A), Color(0xFF8BC34A)],
           ),
         ),
         child: Column(
-
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset("assets/app_images/mais_verde.png"),

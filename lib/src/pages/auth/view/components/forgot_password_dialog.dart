@@ -27,14 +27,12 @@ class ForgotPasswordDialog extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          // Conteúdo
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisSize: MainAxisSize.min,
               children: [
-                // Titulo
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 10),
                   child: Text(
@@ -47,7 +45,6 @@ class ForgotPasswordDialog extends StatelessWidget {
                   ),
                 ),
 
-                // Descrição
                 const Padding(
                   padding: EdgeInsets.only(
                     top: 10,
@@ -60,7 +57,6 @@ class ForgotPasswordDialog extends StatelessWidget {
                   ),
                 ),
 
-                // Campo de email
                 CustomTextField(
                   formFieldKey: _formFieldKey,
                   controller: emailController,
@@ -96,8 +92,6 @@ class ForgotPasswordDialog extends StatelessWidget {
               ],
             ),
           ),
-
-          // Botão para fechar
           Positioned(
             top: 0,
             right: 0,

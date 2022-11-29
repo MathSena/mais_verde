@@ -7,7 +7,6 @@ import '../../../services/utils_services.dart';
 import '../repository/auth_repository.dart';
 import '../result/auth_result.dart';
 
-
 class AuthController extends GetxController {
   RxBool isLoading = false.obs;
 
@@ -115,7 +114,7 @@ class AuthController extends GetxController {
     isLoading.value = true;
 
     AuthResult result =
-    await authRepository.signIn(email: email, password: password);
+        await authRepository.signIn(email: email, password: password);
 
     isLoading.value = false;
 

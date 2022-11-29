@@ -6,7 +6,6 @@ import '../../auth/controller/auth_controller.dart';
 import '../orders_result/orders_result.dart';
 import '../repository/orders_repository.dart';
 
-
 class AllOrdersController extends GetxController {
   List<OrderModel> allOrders = [];
   final ordersRepository = OrdersRepository();

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class AppNameWidget extends StatelessWidget {
   final Color? greenTitleColor;
   final double textSize;
@@ -21,9 +20,7 @@ class AppNameWidget extends StatelessWidget {
         children: [
           TextSpan(
             text: 'Mais ',
-            style: TextStyle(
-              color: greenTitleColor ?? Colors.white
-            ),
+            style: TextStyle(color: greenTitleColor ?? Colors.white),
           ),
           const TextSpan(
             text: 'Verde',

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class OrderStatusWidget extends StatelessWidget {
   final String status;
   final bool isOverdue;
@@ -113,16 +112,15 @@ class _StatusDot extends StatelessWidget {
             border: Border.all(
               color: Colors.green,
             ),
-            color: isActive
-                ? backgroundColor ?? Colors.green
-                : Colors.transparent,
+            color:
+                isActive ? backgroundColor ?? Colors.green : Colors.transparent,
           ),
           child: isActive
               ? const Icon(
-            Icons.check,
-            size: 13,
-            color: Colors.white,
-          )
+                  Icons.check,
+                  size: 13,
+                  color: Colors.white,
+                )
               : const SizedBox.shrink(),
         ),
 
