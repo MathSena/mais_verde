@@ -1,7 +1,9 @@
+import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/order_model.dart';
 import '../../services/utils_services.dart';
+
 
 class PaymentDialog extends StatelessWidget {
   final OrderModel order;
@@ -41,7 +43,11 @@ class PaymentDialog extends StatelessWidget {
                 ),
 
                 // QR Code
-
+                Image.memory(
+                  utilsServices.decodeQrCodeImage(order.qrCodeImage),
+                  height: 200,
+                  width: 200,
+                ),
 
                 // Vencimento
                 Text(
@@ -72,7 +78,7 @@ class PaymentDialog extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    //FlutterClipboard.copy(order.copyAndPaste);
+                    FlutterClipboard.copy(order.copyAndPaste);
                     utilsServices.showToast(message: 'Código copiado');
                   },
                   icon: const Icon(
