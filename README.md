@@ -36,11 +36,6 @@ Na barra superior do **Android Studio**, selecione o dispositivo que deseja
 utilizar e depois clique no ícone **Run**, com o arquivo **main.dart**
 selecionado.
 
-Para utilizar o aplicativo sem criar uma conta, utilize o seguinte login:
-
-- **E-mail**: usuario@anonimo.com
-- **Senha**: UsuarioAnonimo123
-
 **Obs.**: API utilizada é uma API criada na **back4app** [https://www.back4app.com/]
 
 ## Telas principais
@@ -48,7 +43,7 @@ Para utilizar o aplicativo sem criar uma conta, utilize o seguinte login:
 Inicialmente é exibida uma **Splash Screen**.
 Após isso, ele pode **criar uma conta** ou **entrar** com uma conta já existente:
 
-<img width="250" alt="Tela de Login" src="prints/login.png" /> 
+<img width="250" alt="Tela de Login" src="lib/src/prints/login.png" /> 
 
 
 
